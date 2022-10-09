@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Search to Google and Youtube</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="flex c">
+
+  <div class="pan flex c">
+    
+    <div class="srhBx flex">
+      <input type="text" id="srh">
+      <div class="iconBx flex" onclick="op('#srh').value='';op('#srh').focus();">
+        <img src="img/add.svg" style="transform: rotate(45deg);">
+      </div>
+    </div>
+
+    <div class="iPan flex">
+      
+      <div class="i flex active" style="--th: #ff8707" onclick="chApp('google',this)">
+        <img src="img/google.png" style="position: absolute;" alt="">
+        <div class="act flex" style="position: absolute;">
+          <div class="btn flex" onclick="listen('google')"><img src="img/mic.svg" alt=""></div>
+          <div class="btn flex" onclick="op('#srh').focus();" id="frClick"><img src="img/type.svg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="i flex" style="--th: #ff0741" onclick="chApp('youtube',this)">
+        <img src="img/yt.png" style="position: absolute;" alt="">
+        <div class="act flex" style="position: absolute;">
+          <div class="btn flex" onclick="listen('youtube')"><img src="img/mic.svg" alt=""></div>
+          <div class="btn flex" onclick="op('#srh').focus();"><img src="img/type.svg" alt=""></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="msgBx" col="#fff"></div>
+  </div>
+
+  <script src="js/srh.js"></script>
+
+</body>
+</html>

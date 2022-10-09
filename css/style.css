@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c{
+  flex-flow: column;
+}
+.texCen{
+  text-align: center;
+}
+.w100p{
+  width: 100%;
+}
+body{
+  --lightBg1: #fff;
+  --lightBg2: #eee;
+  --darkBg1: #111;
+  --darkBg2: #222;
+  --lightText1: #fff;
+  --darkText2: #222;
+  --darkText3: #333;
+  --darkText5: #555;
+  min-height: 100vh;
+  background: #f1f1ff;
+  font-family: sans-serif;
+  width: 100%;
+  display: flex;align-items: center;justify-content: flex-start;flex-flow: column;
+}
+html{ 
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+.forceCenter{ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.noBtn{
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.button{
+  padding: 7px 16px;
+  margin: 5px 0;
+  border-radius: 99px;
+  background: var(--stdBg);
+  color: #fff;
+  letter-spacing: 1px;
+  filter: hue-rotate(45deg);
+}
+
+.lined{
+  text-align: center;
+  width: max-content;
+  --w: 100px;
+}
+.lined::before,
+.lined::after{
+  content: "";
+  position: absolute;
+  width: var(--w);
+  height: 1px;
+  background: var(--lightBg1);
+  top: 50%;
+}
+.lined::before{
+  left: calc(-1*var(--w));
+}
+.lined::after{
+  right: calc(-1*var(--w));
+}
+
+/*  */
+/*  */
+.pan{
+  width: 100%;
+  max-width: 350px;  
+  border-radius: 50px;
+  height: 100vh;
+  max-height: 400px;
+  overflow: hidden;
+  justify-content: space-around;
+}
+.srhBx{
+  width: 90%;
+  max-width: 500px;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 99px;
+}
+.srhBx >*{
+  display: block;
+}
+.srhBx input{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  color: #333;
+  font-size: 1.2em;
+}
+.srhBx .iconBx{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  box-shadow: 0 0 30px #a1a1ff;
+  right: 10px;
+}
+
+.iPan{
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  justify-content: space-between;
+}
+.iPan .i{
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+}
+.iPan .i::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--th);
+  z-index: -1;
+  transition: .5s all;
+  border-radius: 50%;
+}
+.iPan .i.active::before{
+  transform: scale(5);
+  transition: .5s all .25s;
+}
+.iPan .i > img{
+  width: 120px;
+}
+.iPan .i .act{
+  width: 70%;
+  height: 50px;
+  bottom: 15px;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.iPan .i .act .btn{
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 30px #a1a1ff;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.iPan .i .act .btn img{
+  opacity: .7;
+}
+
+
+@media screen and (max-width: 600px){
+  .lined{
+    --w: 50px;
+  }
+}

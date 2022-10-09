@@ -1,0 +1,22 @@
+{
+   "short_name": "Google",
+   "name": "Google - safe",
+   "description": "Search here safely",
+   "icons": [
+     {
+       "src": "192.png",
+       "type": "image/png",
+       "sizes": "192x192"
+     },
+     {
+       "src": "512.png",
+       "type": "image/png",
+       "sizes": "512x512"
+     }
+   ],
+   "start_url": "index.html",
+   "background_color": "#f1f1ff",
+   "display": "standalone",
+    
+   "theme_color": "#f1f1ff",
+ }
